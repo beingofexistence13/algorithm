@@ -4,19 +4,19 @@ using namespace std;
 
 int main() {
   string s;
-  cin >> s; // read the input string
-  int n = s.length(); // get the length of the string
-  int count = 1; // initialize the count of consecutive players
-  bool dangerous = false; // initialize the flag for dangerous situation
-  for (int i = 1; i < n; i++) { // loop through the string from the second character
-	if (s[i] == s[i-1]) { // if the current character is the same as the previous one
+  cin >> s; 
+  int n = s.length(); 
+  int count = 1; 
+  bool dangerous = false; 
+  for (int i = 1; i < n; i++) { 
+	if (s[i] == s[i-1]) { 
 	  count++; // increment the count
-	  if (count >= 7) { // if the count is at least 7
-		dangerous = true; // set the flag to true
+	  if (count >= 7) { 
+		dangerous = true;
 		break; // break the loop
 	  }
-	} else { // if the current character is different from the previous one
-	  count = 1; // reset the count to 1
+	} else { 
+	  count = 1; 
 	}
   }
   if (dangerous) { // if the flag is true
