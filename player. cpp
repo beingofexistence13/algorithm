@@ -10,19 +10,19 @@ int main() {
   bool dangerous = false; 
   for (int i = 1; i < n; i++) { 
 	if (s[i] == s[i-1]) { 
-	  count++; // increment the count
+	  count++; 
 	  if (count >= 7) { 
 		dangerous = true;
-		break; // break the loop
+		break; 
 	  }
 	} else { 
 	  count = 1; 
 	}
   }
-  if (dangerous) { // if the flag is true
-	cout << "YES" << endl; // print "YES"
-  } else { // if the flag is false
-	cout << "NO" << endl; // print "NO"
+  if (dangerous) { 
+	cout << "YES" << endl; 
+  } else { 
+	cout << "NO" << endl; 
   }
   return 0;
 }
